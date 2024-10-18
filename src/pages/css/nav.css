@@ -1,0 +1,71 @@
+/* General styling for the navbar */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+.nav_links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav_links li {
+  display: inline;
+  padding: 10px;
+}
+
+.nav_links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+/* Hide the mobile menu icon on larger screens */
+.mobile-menu-icon {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+}
+
+/* Media Queries for mobile */
+@media (max-width: 768px) {
+  /* Stack the menu items vertically */
+  .nav_links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #333;
+      width: 100%;
+  }
+
+  .nav_links.active {
+      display: flex;
+  }
+
+  .nav_links li {
+      display: block;
+      text-align: center;
+      padding: 15px 0;
+  }
+
+  /* Show the mobile menu icon */
+  .mobile-menu-icon {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      cursor: pointer;
+  }
+
+  .mobile-menu-icon i {
+      font-size: 24px;
+  }
+}

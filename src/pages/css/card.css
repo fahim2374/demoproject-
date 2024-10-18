@@ -1,0 +1,12 @@
+.card{
+
+    width: 18rem;
+    padding-top: 10px;
+    display: flex ;
+}
+
+*{
+  
+    /* display: flex; */
+}
+
